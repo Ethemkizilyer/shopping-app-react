@@ -1,0 +1,40 @@
+/* theme dark */
+*{
+  text-decoration: none !important;
+}
+.bg-black {
+  background-color: black;
+}
+
+.bg-light-black {
+  background-color: #262626 !important;
+}
+
+.text-black {
+  color: black;
+}
+
+.text-light-black {
+  color: #262626;
+}
+
+.bg-dark-primary {
+  background-color: #fcbc73 !important;
+}
+
+/* theme light */
+.bg-light {
+  background-color: white;
+}
+
+.bg-light-2 {
+  background-color: #dadcde;
+}
+
+.bg-light-primary {
+  background-color: #192659 !important;
+}
+
+.text-light-primary {
+  color: #192659 !important;
+}
