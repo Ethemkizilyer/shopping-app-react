@@ -1,10 +1,10 @@
 import { Button, Card } from "react-bootstrap";
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 import { ThemeContext } from "../Context/ThemeProvider";
 import { BsCartPlus } from "react-icons/bs";
 
 const ProductCard = ({ data }) => {
-  let { image_url, sale_price, name, id } = data;
+  let { image_url, sale_price, name } = data;
   // const [yut, setYut] = useState([]);
   // const [yu, setYu] = useState([]);
 

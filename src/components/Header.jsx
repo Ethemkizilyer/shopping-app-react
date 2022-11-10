@@ -6,7 +6,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { ThemeContext } from "../Context/ThemeProvider";
 import { BiMoon, BiCart, BiSun, BiDoorOpen } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import { useCart } from "react-use-cart";
+
 
 const Header = () => {
   const { theme, setThemeMode, favorites } = useContext(ThemeContext);
@@ -15,7 +15,7 @@ const Header = () => {
     setThemeMode(darkMode);
   }, [darkMode]);
 
-  const { isEmpty, totalItems } = useCart();
+
   return (
     <Navbar
       collapseOnSelect

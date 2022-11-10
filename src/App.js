@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Cart from "./Pages/Cart";
-import Bakar from "./Bakar";
+// import Bakar from "./Bakar";
 
 function App() {
   const [theme] = useThemeHook();
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/bakar" element={<Bakar />} />
+        {/* <Route path="/bakar" element={<Bakar />} /> */}
       </Routes>
     </main>
   );
