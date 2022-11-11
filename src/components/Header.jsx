@@ -5,10 +5,11 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { ThemeContext } from "../Context/ThemeProvider";
 import { BiMoon, BiCart, BiSun, BiDoorOpen } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Header = () => {
+  const navigate= useNavigate()
   const { theme, setThemeMode, favorites } = useContext(ThemeContext);
   const [darkMode, setDarkMode] = useState(theme);
   useEffect(() => {
@@ -88,8 +89,12 @@ const Header = () => {
               title={<BiDoorOpen size="2rem" />}
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item>Login</NavDropdown.Item>
-              <NavDropdown.Item>Register</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => navigate("/login")}>
+                Login
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => navigate("/register")}>
+                Register
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item>Logout</NavDropdown.Item>
             </NavDropdown>
