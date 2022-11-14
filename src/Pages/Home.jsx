@@ -44,13 +44,18 @@ const Home = () => {
       <Row className="justify-content-center">
         <Col xs={10} md={7} lg={6} xl={4} className="mb-3 mx-auto text-center">
           <Carousel
-            style={{ height: "10rem" }}
-            className={theme ? " text-light my-5" : "text-black my-5"}
+            variant="dark"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+            className={theme ? " text-light mt-5 mb-3" : "text-black mt-5 mb-3"}
           >
             {productData.map((item, index) => (
               <Carousel.Item
                 key={index}
-                className="position-relative overflow-hidden"
+                className="position-relative"
                 interval={inter}
                 onClick={() =>
                   navigate(
@@ -62,14 +67,19 @@ const Home = () => {
                 }
               >
                 <img
-                  style={{ height: "13rem", width: "80%" }}
-                  className="d-block  mx-auto"
+                  style={{ height: "13rem" }}
+                  className="d-block w-100 mx-auto"
                   src={item.image_url}
                   alt="Third slide"
                 />
-                <Carousel.Caption className="position-absolute bottom-0 text-danger h-50 d-flex flex-column gap-0">
+                <Carousel.Caption
+                  style={{ background: "#ffcdd278" }}
+                  className="position-absolute bottom-0 text-danger text-justify h-50 d-flex flex-column pb-0 rounded"
+                >
                   <h6 className="fw-bolder">{item.brand}</h6>
-                  <p style={{ fontSize: "0.8rem" }}>{item.name}</p>
+                  <p style={{ fontSize: "0.8rem", fontWeight: "500" }}>
+                    {item.name}
+                  </p>
                 </Carousel.Caption>
               </Carousel.Item>
             ))}
