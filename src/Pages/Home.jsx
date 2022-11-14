@@ -50,7 +50,7 @@ const Home = () => {
             {productData.map((item, index) => (
               <Carousel.Item
                 key={index}
-                className="position-relative"
+                className="position-relative overflow-hidden"
                 interval={inter}
                 onClick={() =>
                   navigate(
@@ -62,7 +62,7 @@ const Home = () => {
                 }
               >
                 <img
-                  style={{ height: "13rem",width:"80%" }}
+                  style={{ height: "13rem", width: "80%" }}
                   className="d-block  mx-auto"
                   src={item.image_url}
                   alt="Third slide"
@@ -92,7 +92,7 @@ const Home = () => {
               }
               placeholder="Search..."
               value={searchInput}
-              style={{boxShadow:"none"}}
+              style={{ boxShadow: "none" }}
               onChange={(e) => setSearchInput(e.target.value)}
             />
           </InputGroup>
