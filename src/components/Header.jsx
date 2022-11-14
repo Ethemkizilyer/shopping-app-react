@@ -6,16 +6,26 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { ThemeContext } from "../Context/ThemeProvider";
 import { BiMoon, BiCart, BiSun, BiDoorOpen } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
+import { logOut } from "../Context/firebase-config";
 
 
 const Header = () => {
-  const navigate= useNavigate()
-  const { theme, setThemeMode, favorites } = useContext(ThemeContext);
+  const { navi, currentUser } = useContext(ThemeContext);
+  const navigate = useNavigate();
+  const { theme, setThemeMode, favorites, setFavorites } =
+    useContext(ThemeContext);
   const [darkMode, setDarkMode] = useState(theme);
   useEffect(() => {
     setThemeMode(darkMode);
   }, [darkMode]);
+  console.log(currentUser);
 
+  const cıkıs = () => {
+    if (currentUser) {
+      logOut();
+      setFavorites([]);
+    }
+  };
 
   return (
     <Navbar
@@ -85,6 +95,7 @@ const Header = () => {
               )}
               {/* <span style={{ marginLeft: favorites?.length !=0 ? "-13px" : 0 }}>Cart</span> */}
             </Link>
+
             <NavDropdown
               title={<BiDoorOpen size="2rem" />}
               id="basic-nav-dropdown"
@@ -96,10 +107,16 @@ const Header = () => {
                 Register
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item>Logout</NavDropdown.Item>
+              <NavDropdown.Item
+                onClick={cıkıs}
+                disabled={!currentUser && "true"}
+              >
+                Logout
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
+        <span className={theme ? "text-white text-capitalize" : "text-dark text-capitalize"} >{currentUser?.displayName}</span>
       </Container>
     </Navbar>
   );

@@ -9,16 +9,16 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
-import { useState } from "react";
+
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_apiKey,
-  authDomain: process.env.REACT_APP_authDomain,
-  projectId: process.env.REACT_APP_projectId,
-  storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId: process.env.REACT_APP_messagingSenderId,
-  appId: process.env.REACT_APP_appId,
-  measurementId: process.env.REACT_APP_TMDB_KEY,
+  apiKey: "AIzaSyCuIcycvkCnyUb_W7v-aUkW3H4xUy2MLJU",
+  authDomain: "bakar-48bc8.firebaseapp.com",
+  projectId: "bakar-48bc8",
+  storageBucket: "bakar-48bc8.appspot.com",
+  messagingSenderId: "349433378359",
+  appId: "1:349433378359:web:4e7b95b55db5629b48f1b2",
+  measurementId: "G-0EDJKCQHZQ",
 };
 
 const app = initializeApp(firebaseConfig);

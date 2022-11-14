@@ -2,11 +2,13 @@ import { Button, Card } from "react-bootstrap";
 import React, { useContext} from "react";
 import { ThemeContext } from "../Context/ThemeProvider";
 import { BsCartPlus } from "react-icons/bs";
+import { useNavigate, useParams } from "react-router-dom";
 
 const ProductCard = ({ data }) => {
-  let { image_url, sale_price, name } = data;
+  let { image_url, sale_price, name,id } = data;
   // const [yut, setYut] = useState([]);
   // const [yu, setYu] = useState([]);
+const navigate= useNavigate()
 
   // console.log(props);
   // const {theme}= useThemeHook()
@@ -57,7 +59,14 @@ const ProductCard = ({ data }) => {
           marginBottom: "inherit",
         }}
       >
-        <div style={{ width: "9rem" }}>
+        <div
+          onClick={() =>
+            navigate(`/detail/${id}/${name.split(" ").join("-")}`, {
+              state: data,
+            })
+          }
+          style={{ width: "15rem" }}
+        >
           <Card.Img variant="top" className="img-fluid" src={image_url} />
         </div>
       </div>

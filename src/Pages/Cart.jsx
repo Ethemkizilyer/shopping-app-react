@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { Button, Container, Col, Row, Table } from "react-bootstrap";
 import { ThemeContext } from "../Context/ThemeProvider";
 import { BsCartCheck, BsCartX } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { theme, setFavorites, favorites } = useContext(ThemeContext);
 
+  const navigate = useNavigate();
   const ekleCart = (data) => {
     setFavorites((item) => {
       const nam = item.find((im) => im.id === data.id);
@@ -138,7 +140,11 @@ const Cart = () => {
               >
                 <BsCartX size="1.7rem" /> Tümünü Sil
               </Button>
-              <Button variant="success" className="m-2">
+              <Button
+                onClick={() => navigate("/credit")}
+                variant="success"
+                className="m-2"
+              >
                 <BsCartCheck size="1.7rem" />
                 Satın Al
               </Button>
