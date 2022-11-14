@@ -62,8 +62,8 @@ const Home = () => {
                 }
               >
                 <img
-                  style={{ height: "13rem" }}
-                  className="d-block w-100 mx-auto"
+                  style={{ height: "13rem",width:"80%" }}
+                  className="d-block  mx-auto"
                   src={item.image_url}
                   alt="Third slide"
                 />
