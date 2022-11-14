@@ -1,11 +1,13 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { Link, useNavigate } from "react-router-dom";
 import { auth, signInWithGoogle } from "../Context/firebase-config";
+import { ThemeContext } from "../Context/ThemeProvider";
 
 const Login = () => {
+  const { setNavi } = useContext(ThemeContext);
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const navigate = useNavigate();
@@ -19,6 +21,7 @@ const Login = () => {
         loginPassword
       );
       navigate("/");
+      setNavi(auth?.currentUser?.displayName);
       alert(`Hoş geldiniz Sn. ${auth?.currentUser?.displayName}`);
     } catch (err) {
       alert(err.message);

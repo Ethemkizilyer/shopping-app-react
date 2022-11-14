@@ -21,10 +21,11 @@ const ThemeProvider = (props) => {
 
   const setThemeMode = (mode) => setTheme(mode);
   const [currentUser, setCurrentUser] = useState();
-  const [navi, setNavi] = useState("");
+  const [navi, setNavi] = useState();
 
   useEffect(() => {
     userObserver(setCurrentUser);
+
   }, []);
   return (
     <ThemeContext.Provider

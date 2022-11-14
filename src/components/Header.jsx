@@ -10,7 +10,7 @@ import { logOut } from "../Context/firebase-config";
 
 
 const Header = () => {
-  const { navi, currentUser } = useContext(ThemeContext);
+  const {setNavi, navi, currentUser } = useContext(ThemeContext);
   const navigate = useNavigate();
   const { theme, setThemeMode, favorites, setFavorites } =
     useContext(ThemeContext);
@@ -18,13 +18,15 @@ const Header = () => {
   useEffect(() => {
     setThemeMode(darkMode);
   }, [darkMode]);
-  console.log(currentUser);
+  console.log(currentUser?.displayName);
+  console.log(navi)
 
   const cıkıs = () => {
-    if (currentUser) {
+   
       logOut();
       setFavorites([]);
-    }
+      setNavi("")
+    
   };
 
   return (
@@ -116,7 +118,13 @@ const Header = () => {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-        <span className={theme ? "text-white text-capitalize" : "text-dark text-capitalize"} >{currentUser?.displayName}</span>
+        <span
+          className={
+            theme ? "text-white text-capitalize" : "text-dark text-capitalize"
+          }
+        >
+          {currentUser?.displayName || navi}
+        </span>
       </Container>
     </Navbar>
   );

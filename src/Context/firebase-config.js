@@ -34,7 +34,7 @@ export const createUser = async (email, password, displayName) => {
       displayName: displayName,
     });
     alert(`Hoş geldiniz Sn. ${displayName}`);
-    console.log(user);
+    // console.log(user);
   } catch (err) {
     alert(err.message);
   }
@@ -63,7 +63,7 @@ export const userObserver = (setCurrentUser) => {
   onAuthStateChanged(auth, (currentUser) => {
     if (currentUser) {
       setCurrentUser(currentUser);
-      console.log(currentUser);
+      // console.log(currentUser);
     } else {
       setCurrentUser(false);
     }
