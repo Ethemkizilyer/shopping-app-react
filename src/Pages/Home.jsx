@@ -110,15 +110,16 @@ const Home = () => {
             />
           </InputGroup>
         </Col>
-        <div className="d-flex gap-4 border ">
-          <div className="border">
+        <div className="d-flex gap-4 justify-content-start">
+          <div className=" ">
+            <h5>Filtrele</h5>
             <select
               style={{
                 width: "10rem",
                 textTransform: "capitalize",
                 paddingLeft: "0.5rem",
               }}
-              size="10"
+              size="1"
               className="rounded"
               name="all"
               id=""
@@ -127,13 +128,13 @@ const Home = () => {
               <option value="">Tümü</option>
               {fil.map((item, index) => (
                 <option key={index} value={item}>
-                  {" "}
-                  {item}{" "}
+                  
+                  {item}
                 </option>
               ))}
             </select>
           </div>
-          <Row className="justify-content-center d-flex gap-3">
+          <Row className="justify-content-center d-flex gap-3 flex-wrap">
             {file
               ? productData
                   ?.filter((item) => item.category == file)
