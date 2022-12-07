@@ -1484,19 +1484,19 @@ export const items = [
     brand: "ARIZONA",
     num_reviews: 39,
   },
-  {
-    id: 100,
-    sku: "pp5006243106",
-    name: "Liz Claiborne® City-Fit Skinny Jeans - Plus",
-    description:
-      'Look the part of the urban fashionista in our skinny jeans that sit below the waist and are fitted through the hip and thigh. 5-pocket styling cotton/polyester/spandex washable imported plus: 31½" inseam plus short: 29½" inseam',
-    list_price: 58.71,
-    sale_price: 23.47,
-    category: "pantolon",
-    average_product_rating: 4,
-    image_url:
-      "http://s7d9.scene7.com/is/image/JCPenney/DP1104201517021565M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
-    brand: "LIZ CLAIBORNE",
-    num_reviews: 3,
-  },
+  // {
+  //   id: 100,
+  //   sku: "pp5006243106",
+  //   name: "Liz Claiborne® City-Fit Skinny Jeans - Plus",
+  //   description:
+  //     'Look the part of the urban fashionista in our skinny jeans that sit below the waist and are fitted through the hip and thigh. 5-pocket styling cotton/polyester/spandex washable imported plus: 31½" inseam plus short: 29½" inseam',
+  //   list_price: 58.71,
+  //   sale_price: 23.47,
+  //   category: "pantolon",
+  //   average_product_rating: 4,
+  //   image_url:
+  //     "http://s7d9.scene7.com/is/image/JCPenney/DP1104201517021565M.tif?hei=380&amp;wid=380&op_usm=.4,.8,0,0&resmode=sharp2&op_usm=1.5,.8,0,0&resmode=sharp",
+  //   brand: "LIZ CLAIBORNE",
+  //   num_reviews: 3,
+  // },
 ];
