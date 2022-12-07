@@ -23,7 +23,13 @@ const Register = () => {
   };
 
   return (
-    <div className="d-flex align-items-center justify-content-center h-75 ">
+    <div
+      style={{
+        paddingTop: "70px",
+        paddingBottom: "300px",
+      }}
+      className="d-flex align-items-center justify-content-center h-75 "
+    >
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
           <Form.Label>Userame</Form.Label>

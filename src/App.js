@@ -10,15 +10,23 @@ import Register from "./Pages/Register";
 import Desc from "./Pages/Desc";
 import Credit from "./Pages/Credit";
 import PrivateRouter from "./router/PrivateRouter";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 // import Bakar from "./Bakar";
 
+
+
+
+
+
 function App() {
+
   const [theme] = useThemeHook();
+
+
   return (
-    <main
-      className={theme ? "bg-black" : "bg-light-2"}
-      style={{ height: "100vh", overflow: "auto" }}
-    >
+    <main id="ert"  className={theme ? "bg-black" : "bg-light-2 "}>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -32,8 +40,10 @@ function App() {
 
         {/* <Route path="/bakar" element={<Bakar />} /> */}
       </Routes>
+
+      <Footer />
     </main>
   );
 }
 
-export default App;
+export default App

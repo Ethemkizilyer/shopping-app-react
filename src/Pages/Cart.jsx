@@ -39,7 +39,12 @@ const Cart = () => {
     });
   };
   return (
-    <Container className="py-4 mt-5">
+    <Container style={{
+paddingTop:"20px",
+paddingBottom:"300px"
+
+
+    }} className="mt-6">
       <h1
         className={`${
           theme ? "text-light " : "text-light-primary "
@@ -118,7 +123,7 @@ const Cart = () => {
         </Table>
         {favorites?.length !== 0 && (
           <Row
-            style={{ position: "fixed", bottom: 0 }}
+            style={{ }}
             className={`${
               theme ? "bg-light-black text-light" : "bg-light text-black"
             } justify-content-center w-100`}

@@ -18,8 +18,8 @@ const Header = () => {
   useEffect(() => {
     setThemeMode(darkMode);
   }, [darkMode]);
-  console.log(currentUser?.displayName);
-  console.log(navi)
+  // console.log(currentUser?.displayName);
+  // console.log(navi)
 
   const cıkıs = () => {
    

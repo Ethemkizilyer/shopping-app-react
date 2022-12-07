@@ -32,7 +32,13 @@ const Login = () => {
     return signInWithGoogle();
   };
   return (
-    <div className="d-flex align-items-center justify-content-center h-75 ">
+    <div
+      style={{
+        paddingTop: "70px",
+        paddingBottom: "300px",
+      }}
+
+      className="d-flex align-items-center justify-content-center h-75 ">
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>

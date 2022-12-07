@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import { ThemeContext } from "../Context/ThemeProvider";
 import { Button } from "react-bootstrap";
+import Footer from "../components/Footer";
 
 const Desc = () => {
   const { state } = useLocation();
@@ -23,7 +24,15 @@ const Desc = () => {
     });
   };
   return (
-    <div className="w-100 mx-auto text-center d-flex align-items-center justify-content-center h-100">
+    <div
+      style={{
+        paddingTop: "70px",
+        paddingBottom: "300px",
+
+
+      }}
+      className="w-100 mx-auto text-center d-flex align-items-center justify-content-center "
+    >
       <Card
         style={{
           width: "48rem",
@@ -61,6 +70,7 @@ const Desc = () => {
           </Card.Body>
         </div>
       </Card>
+      <Footer />
     </div>
   );
 };
